@@ -11,7 +11,7 @@ Although the omnibusarchiv.de website provides that database publicly, I urge yo
 
 ## Noteworthy details
 
-I initially set out to working with Scrapy as it made sense to my to use something that is being widelay used for scraping and downloading data. The websites code is very old, does not use any CSS and therefore I had to fall back to using `xpath` instead of css selectors.
+I initially set out to working with Scrapy as it made sense to me to use something that is being widelay used for scraping and downloading data. The websites code is very old, does not use any CSS and therefore I had to fall back to using `xpath` instead of css selectors.
 As I had trouble getting the details of `xpath` working in conjunction with Scrapy and after some tinkering decided to go ahead with coding everything by myself.
 I ended up still using the `Selector` sub-module from `scrapy` hence the details for the virtual environment I set up:
 
