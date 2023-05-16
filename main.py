@@ -124,6 +124,10 @@ while current_slice <= MAX_RANGE:
             # Get image
             urllib.request.urlretrieve(bus_image, current_slice_image_path + '/' + image_filename)
 
+        # Combining all elements of info into a single string, removing odd things like \r and multiple space characters
+        for item in info:
+            info_string += ' '.join(item.rstrip('\r').split()) + '|'
+            
         # Creating temporary dictionary of current bus
         temp = {
             'id': int(id),
@@ -133,7 +137,7 @@ while current_slice <= MAX_RANGE:
             'image': current_slice_image_path + '/' + image_filename,
             'archive_number': archivenumber,
             'country': country,
-            'info': info,
+            'info': info_string,
             'source_url': detail_url,
         }
 
